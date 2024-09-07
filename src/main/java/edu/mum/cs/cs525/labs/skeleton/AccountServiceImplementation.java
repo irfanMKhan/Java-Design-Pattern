@@ -1,5 +1,6 @@
 package edu.mum.cs.cs525.labs.skeleton;
 
+import edu.mum.cs.cs525.labs.skeleton.factory.AccountDAOFactory;
 import edu.mum.cs.cs525.labs.skeleton.observer.EmailSender;
 import edu.mum.cs.cs525.labs.skeleton.observer.Logger;
 import edu.mum.cs.cs525.labs.skeleton.observer.Observer;
@@ -17,6 +18,11 @@ public class AccountServiceImplementation implements AccountService {
 
     public AccountServiceImplementation() {
         accountDAO = new AccountDAOImplementation();
+        observerLists = new ArrayList<>();
+    }
+
+    public AccountServiceImplementation(AccountDAOFactory factory) {
+        this.accountDAO = factory.createAccountDAO();
         observerLists = new ArrayList<>();
     }
 

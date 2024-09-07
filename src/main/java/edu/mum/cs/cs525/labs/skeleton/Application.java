@@ -3,6 +3,8 @@ package edu.mum.cs.cs525.labs.skeleton;
 import edu.mum.cs.cs525.labs.skeleton.decorator.P1PromotionDecorator;
 import edu.mum.cs.cs525.labs.skeleton.decorator.P2PromotionDecorator;
 import edu.mum.cs.cs525.labs.skeleton.decorator.P3PromotionDecorator;
+import edu.mum.cs.cs525.labs.skeleton.factory.AccountDAOFactory;
+import edu.mum.cs.cs525.labs.skeleton.factory.ProductionAccountDAOFactory;
 import edu.mum.cs.cs525.labs.skeleton.observer.EmailSender;
 import edu.mum.cs.cs525.labs.skeleton.observer.Logger;
 import edu.mum.cs.cs525.labs.skeleton.observer.SMSSender;
@@ -12,7 +14,11 @@ import edu.mum.cs.cs525.labs.skeleton.stretegy.SavingInterestStrategy;
 
 public class Application {
     public static void main(String[] args) {
-        AccountService accountService = new AccountServiceImplementation();
+
+        AccountDAOFactory factory = new ProductionAccountDAOFactory();
+
+        AccountService accountService = new AccountServiceImplementation(factory);
+//        AccountService accountService = new AccountServiceImplementation();
 
         accountService.registerObserver(new EmailSender());
         accountService.registerObserver(new SMSSender());
