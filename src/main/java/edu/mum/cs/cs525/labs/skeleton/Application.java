@@ -6,7 +6,7 @@ import edu.mum.cs.cs525.labs.skeleton.decorator.P3PromotionDecorator;
 import edu.mum.cs.cs525.labs.skeleton.factory.AccountDAOFactory;
 import edu.mum.cs.cs525.labs.skeleton.factory.ProductionAccountDAOFactory;
 import edu.mum.cs.cs525.labs.skeleton.observer.EmailSender;
-import edu.mum.cs.cs525.labs.skeleton.observer.Logger;
+import edu.mum.cs.cs525.labs.skeleton.observer.ObserverLogger;
 import edu.mum.cs.cs525.labs.skeleton.observer.SMSSender;
 import edu.mum.cs.cs525.labs.skeleton.stretegy.CheckingInterestStrategy;
 import edu.mum.cs.cs525.labs.skeleton.stretegy.InterestStrategy;
@@ -22,7 +22,7 @@ public class Application {
 
         accountService.registerObserver(new EmailSender());
         accountService.registerObserver(new SMSSender());
-        accountService.registerObserver(new Logger());
+        accountService.registerObserver(new ObserverLogger());
 
         // create 2 accounts;
         accountService.createAccount("1263862", "Frank Brown", new SavingInterestStrategy());

@@ -6,7 +6,7 @@ import edu.mum.cs.cs525.labs.skeleton.command.TransferFundCommand;
 import edu.mum.cs.cs525.labs.skeleton.command.WithdrawCommand;
 import edu.mum.cs.cs525.labs.skeleton.factory.AccountDAOFactory;
 import edu.mum.cs.cs525.labs.skeleton.observer.EmailSender;
-import edu.mum.cs.cs525.labs.skeleton.observer.Logger;
+import edu.mum.cs.cs525.labs.skeleton.observer.ObserverLogger;
 import edu.mum.cs.cs525.labs.skeleton.observer.Observer;
 import edu.mum.cs.cs525.labs.skeleton.observer.SMSSender;
 import edu.mum.cs.cs525.labs.skeleton.stretegy.InterestStrategy;
@@ -122,7 +122,7 @@ public class AccountServiceImplementation implements AccountService {
 
     public void updateObserver(String purpose, double amount) {
         for (Observer observer : observerLists) {
-            if (observer instanceof Logger)
+            if (observer instanceof ObserverLogger)
                 observer.update(purpose, amount);
             else if (observer instanceof EmailSender && Objects.equals(purpose, "CREATE"))
                 observer.update(purpose, amount);
