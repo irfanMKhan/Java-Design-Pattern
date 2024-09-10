@@ -1,0 +1,17 @@
+User            AccountService       Command        Account         AccountDAO
+  |                    |                 |             |               |
+  |   deposit()        |                 |             |               |
+  |------------------->|                 |             |               |
+  |                    |   execute()     |             |               |
+  |                    |---------------->|             |               |
+  |                    |                 |  deposit()  |               |
+  |                    |                 |------------>|               |
+  |                    |                 |             | updateAccount |
+  |                    |                 |             |-------------->|
+  |                    |                 |             |               |
+  |                    |   undo()        |             |               |
+  |                    |---------------->|             |               |
+  |                    |                 |  withdraw() |               |
+  |                    |                 |------------>|               |
+  |                    |                 |             | updateAccount |
+  |                    |                 |             |-------------->|
