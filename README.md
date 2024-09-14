@@ -104,10 +104,21 @@ Define the steps of an algorithm in an operation deferring some steps to subclas
 change some steps of an algorithm without changing the algorithm structure.
 
 Bad Side:</br>
-`Limited flexibility.`
+`Increased coupling between base and sub classes.`
 
 Principle:</br>
 `Don’t call us, we will call you.`
+
+
+
+### Iterator:
+provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+Bad Side:</br>
+` Limited Flexibility with Complex Iteration Logic.`
+
+Principle:</br>
+`A class should have only one reason to change.`
 
 
 
