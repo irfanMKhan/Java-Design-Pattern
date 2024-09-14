@@ -1,17 +1,22 @@
 package edu.mum.cs.cs525.labs.skeleton;
 
-import edu.mum.cs.cs525.labs.skeleton.command.*;
-import edu.mum.cs.cs525.labs.skeleton.decorator.P1PromotionDecorator;
-import edu.mum.cs.cs525.labs.skeleton.decorator.P2PromotionDecorator;
-import edu.mum.cs.cs525.labs.skeleton.decorator.P3PromotionDecorator;
-import edu.mum.cs.cs525.labs.skeleton.factory.AccountDAOFactory;
-import edu.mum.cs.cs525.labs.skeleton.factory.ProductionAccountDAOFactory;
-import edu.mum.cs.cs525.labs.skeleton.observer.EmailSender;
-import edu.mum.cs.cs525.labs.skeleton.observer.ObserverLogger;
-import edu.mum.cs.cs525.labs.skeleton.observer.SMSSender;
-import edu.mum.cs.cs525.labs.skeleton.stretegy.CheckingInterestStrategy;
-import edu.mum.cs.cs525.labs.skeleton.stretegy.InterestStrategy;
-import edu.mum.cs.cs525.labs.skeleton.stretegy.SavingInterestStrategy;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.decorator.P1PromotionDecorator;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.decorator.P2PromotionDecorator;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.decorator.P3PromotionDecorator;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.command.*;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.factory.AccountDAOFactory;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.factory.ProductionAccountDAOFactory;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.observer.EmailSender;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.observer.ObserverLogger;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.observer.SMSSender;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.stretegy.CheckingInterestStrategy;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.stretegy.InterestStrategy;
+import edu.mum.cs.cs525.labs.skeleton.design.pattern.stretegy.SavingInterestStrategy;
+import edu.mum.cs.cs525.labs.skeleton.model.Account;
+import edu.mum.cs.cs525.labs.skeleton.model.AccountEntry;
+import edu.mum.cs.cs525.labs.skeleton.model.Customer;
+import edu.mum.cs.cs525.labs.skeleton.service.AccountService;
+import edu.mum.cs.cs525.labs.skeleton.service.implementation.AccountServiceImplementation;
 
 public class Application {
     public static void main(String[] args) {
