@@ -3,7 +3,7 @@
 
 ### Strategy:
 Define a family of algorithms, encapsulate them and make them interchangeable. 
-Strategy lets the algorithm vary independently from the client that uses them.
+Strategy lets the algorithm vary independently of the client that uses them.
 
 Bad side:</br>
 `Program implementation means when defining a family of algorithm we need to program to implementation for instantiation.`
@@ -45,8 +45,8 @@ Principle:</br>
 
 
 ### Factory Method:
-Defines an interface for creating objects but lets the sub classes decide which class to instantiate. The factory 
-method lets the class defer its instantiation to sub classes.
+Defines an interface for creating objects but lets the subclasses decide which class to instantiate. The factory 
+method lets the class defer its instantiation to subclasses.
 
 Abstract Factory: Provides an interface for creating families of related or dependent objects without specifying their 
 concrete classes.
