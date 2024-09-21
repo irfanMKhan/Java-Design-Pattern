@@ -61,6 +61,17 @@ Principle:</br>
 
 
 
+### Singleton Method:
+Ensure a class only has one instance and provide a global point of access to it.
+
+Bad Side:</br>
+``
+
+Principle:</br>
+``
+
+
+
 ### Command:
 Encapsulate a request as an object there by letting you parameterize clients with different requests, queue requests, 
 log request and support undo operation.
@@ -112,15 +123,43 @@ Principle:</br>
 
 
 ### Iterator:
-provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
 Bad Side:</br>
-` Limited Flexibility with Complex Iteration Logic.`
+`Limited Flexibility with Complex Iteration Logic.`
 
 Principle:</br>
 `A class should have only one reason to change.`
 
 
+### Compositor:
+Compose objects into tree structures to represent part whole hierarchies.Composite let clients treat individual 
+objects and compositions of object uniformly.
 
+Bad Side:</br>
+``
+
+Principle:</br>
+
+
+
+### State:
+allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+Bad Side:</br>
+``
+
+Principle:</br>
+
+
+
+### Proxy:
+Provide a surrogate or placeholder for another object to control access to it.
+
+Bad Side:</br>
+``
+
+Principle:</br>
+``
 
 
