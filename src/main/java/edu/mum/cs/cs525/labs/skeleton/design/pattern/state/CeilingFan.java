@@ -12,11 +12,11 @@ public class CeilingFan {
         this.currentState = state;
     }
 
-    public void pullgreen() {
-        currentState.pullgreen(this);
+    public void pullGreen() {
+        currentState.pullGreen(this);
     }
 
-    public void pullred() {
-        currentState.pullred(this);
+    public void pullRed() {
+        currentState.pullRed(this);
     }
 }
